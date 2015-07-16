@@ -1,10 +1,10 @@
 <!-- todos-list.ng.html -->
-<div class="container">
-  <header>
-    <h1>Todo List</h1>
-  </header>
+<header>
+  <h1>Todo List</h1>
 
-  <ul ng-repeat="task in tasks">
-    <li>{{task.text}}</li>
-  </ul>
-</div>
+  <!-- add a form below the h1 -->
+  <form class="new-task" ng-submit="addTask(newTask); newTask='';">
+    <input ng-model="newTask" type="text"
+           name="text" placeholder="Type to add new tasks" />
+  </form>
+</header>
